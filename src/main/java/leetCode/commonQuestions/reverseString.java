@@ -1,7 +1,7 @@
 package leetCode.commonQuestions;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class reverseString {
     static String stringReverse(String str) {
@@ -22,18 +22,17 @@ public class reverseString {
         return result.toString();
     }
 
-    static String getCharCount(String str) {
-        Map<Character, Integer> map = new HashMap<>();
-        for (Character ch : str.toCharArray()) {
-            map.put(ch, map.getOrDefault(ch, 0) + 1);
-        }
-        return map.toString();
+    static String reverseEachWordUsingStreams(String str){
+        return Arrays.stream(str.split(" "))
+                .map(word -> new StringBuilder(word).reverse().toString())
+                .collect(Collectors.joining(" "));
+
     }
 
     public static void main(String[] args) {
         String str = "Welcome to the world";
         System.out.println(stringReverse(str));
         System.out.println(usingInbuiltMethods(str));
-        System.out.println(getCharCount(str));
+        System.out.println(reverseEachWordUsingStreams(str));
     }
 }
