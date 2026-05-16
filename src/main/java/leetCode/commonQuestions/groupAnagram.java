@@ -3,18 +3,18 @@ package leetCode.commonQuestions;
 import java.util.*;
 
 public class groupAnagram {
-    static List<List<String>> groupAnagrams(String[] strs) {
+    static List<List<String>> groupAnagrams(String[] str) {
         Map<String, List<String>> map = new HashMap<>();
-        for(String str : strs){
-            char[] ch = str.toCharArray();
+        for(String s : str){
+            char[] ch = s.toCharArray();
             Arrays.sort(ch);
             String key = new String(ch);
-            map.computeIfAbsent(key, k -> new ArrayList<>()).add(str);
+            map.computeIfAbsent(key, k -> new ArrayList<>()).add(s);
         }
         return new ArrayList<>(map.values());
     }
     public static void main(String[] args) {
-        String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
-        System.out.println(groupAnagrams(strs));
+        String[] str = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        System.out.println(groupAnagrams(str));
     }
 }

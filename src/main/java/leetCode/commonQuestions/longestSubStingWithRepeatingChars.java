@@ -1,11 +1,9 @@
 package leetCode.commonQuestions;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
-public class lengthOfLongestSubstring {
+public class longestSubStingWithRepeatingChars {
     static int longestSubstringLength(String str){
         Set<Character> set = new HashSet<>();
         int left = 0, max = 0;
