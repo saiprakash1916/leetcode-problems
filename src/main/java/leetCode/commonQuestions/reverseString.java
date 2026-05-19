@@ -22,17 +22,9 @@ public class reverseString {
         return result.toString();
     }
 
-    static String reverseEachWordUsingStreams(String str){
-        return Arrays.stream(str.split(" "))
-                .map(word -> new StringBuilder(word).reverse().toString())
-                .collect(Collectors.joining(" "));
-
-    }
-
     public static void main(String[] args) {
         String str = "Welcome to the world";
         System.out.println(stringReverse(str));
         System.out.println(usingInbuiltMethods(str));
-        System.out.println(reverseEachWordUsingStreams(str));
     }
 }

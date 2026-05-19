@@ -1,4 +1,4 @@
-package leetCode.commonQuestions;
+package leetCode.streams;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,6 +14,6 @@ public class removeDuplicates {
                         list2.stream())
                 .distinct().toList();
 
-        System.out.println(result);
+        System.out.println(result);     // [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13]
     }
 }

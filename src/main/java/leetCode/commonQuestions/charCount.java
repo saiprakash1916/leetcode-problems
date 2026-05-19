@@ -32,19 +32,9 @@ public class charCount {
         return map.toString();
     }
 
-    static String getCharCountUsingStream(String str) {
-        return str.chars()
-                .filter(ch -> ch != ' ')
-                .mapToObj(ch -> (char) ch)
-                .collect(Collectors.groupingBy(
-                        ch -> ch, Collectors.counting())).toString();
-
-    }
-
     public static void main(String[] args) {
         String str = "Welcome to the world";
         System.out.println(getCharCountWithoutCollections(str));
         System.out.println(getCharCount(str));
-        System.out.println(getCharCountUsingStream(str));
     }
 }
