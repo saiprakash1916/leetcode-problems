@@ -1,4 +1,4 @@
-package leetCode.commonQuestions;
+package commonQuestions;
 
 public class primeNumber {
     static boolean isPrimeNumber(int num){

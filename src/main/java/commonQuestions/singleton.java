@@ -1,4 +1,4 @@
-package leetCode.commonQuestions;
+package commonQuestions;
 
 public class singleton {
     private static singleton instance;

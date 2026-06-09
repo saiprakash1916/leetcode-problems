@@ -1,4 +1,4 @@
-package leetCode.commonQuestions;
+package commonQuestions;
 
 public class armStrongNumber {
     static boolean isArmStrong(int num){

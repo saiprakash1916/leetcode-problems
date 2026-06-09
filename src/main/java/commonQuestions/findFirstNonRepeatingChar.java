@@ -1,4 +1,4 @@
-package leetCode.commonQuestions;
+package commonQuestions;
 
 import java.util.HashMap;
 import java.util.Map;

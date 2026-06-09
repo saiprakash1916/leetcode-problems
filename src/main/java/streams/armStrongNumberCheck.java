@@ -1,4 +1,4 @@
-package leetCode.streams;
+package streams;
 
 public class armStrongNumberCheck {
 

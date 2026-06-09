@@ -1,8 +1,7 @@
-package leetCode.commonQuestions;
+package commonQuestions;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class charCount {
 

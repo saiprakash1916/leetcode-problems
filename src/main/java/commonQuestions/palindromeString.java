@@ -1,4 +1,4 @@
-package leetCode.commonQuestions;
+package commonQuestions;
 
 public class palindromeString {
     static boolean isPalindrome(String str) {

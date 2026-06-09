@@ -1,7 +1,4 @@
-package leetCode.commonQuestions;
-
-import java.util.Arrays;
-import java.util.stream.Collectors;
+package commonQuestions;
 
 public class reverseString {
     static String stringReverse(String str) {

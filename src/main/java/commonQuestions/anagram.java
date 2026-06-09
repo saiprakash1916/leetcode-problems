@@ -1,6 +1,4 @@
-package leetCode.commonQuestions;
-
-import java.util.stream.Collectors;
+package commonQuestions;
 
 public class anagram {
     static boolean isAnagram(String str1, String str2) {

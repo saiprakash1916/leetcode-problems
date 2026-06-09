@@ -1,4 +1,4 @@
-package leetCode.streams;
+package streams;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -7,21 +7,23 @@ import java.util.stream.Collectors;
 
 public class frequencyCount {
 
-    static void frequencyCountOfWords(String words) {
-        Map<String, Long> map = Arrays.stream(words.split(" "))
+    static void frequencyCountOfWords(String str) {
+        Map<String, Long> result = Arrays.stream(str.split(" "))
                 .collect(Collectors.groupingBy(
-                        Function.identity(), Collectors.counting()
+                        Function.identity(),
+                        Collectors.counting()
                 ));
-        System.out.println(map);
+        System.out.println(result);
     }
 
-    static void frequencyCountOfChar(String words) {
-        Map<Character, Long> map = words.chars()
+    static void frequencyCountOfChar(String str) {
+        Map<Character, Long> result = str.chars()
                 .mapToObj(c -> (char) c)
                 .filter(c -> c != ' ')
                 .collect(Collectors.groupingBy(
-                        Function.identity(), Collectors.counting()));
-        System.out.println(map);
+                        Function.identity(),
+                        Collectors.counting()));
+        System.out.println(result);
     }
 
     public static void main(String[] args) {

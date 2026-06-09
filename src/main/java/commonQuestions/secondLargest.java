@@ -1,7 +1,8 @@
-package leetCode.commonQuestions;
+package commonQuestions;
 
 public class secondLargest {
-    static int secondLargestNumber(int[] arr) {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 4, 45, 99};
         int first = Integer.MIN_VALUE;
         int second = Integer.MIN_VALUE;
 
@@ -13,11 +14,7 @@ public class secondLargest {
                 second = num;
             }
         }
-        return second;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {10, 20, 4, 45, 99};
-        System.out.println(secondLargestNumber(arr));
+        System.out.println("First Largest Number: " + first);
+        System.out.println("Second Largets Number: " + second);
     }
 }

@@ -1,4 +1,4 @@
-package leetCode.streams;
+package streams;
 
 import java.util.Arrays;
 import java.util.List;
