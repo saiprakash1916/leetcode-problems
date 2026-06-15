@@ -1,8 +1,11 @@
-package streams;
+package streams.interviewPractice;
 
 import java.util.*;
 
 public class secondHighestSalary {
+    record Employee(String name, double salary) {
+    }
+
     public static void main(String[] args) {
         List<Employee> employees = List.of(
                 new Employee("Raj", 20000),
@@ -24,7 +27,4 @@ public class secondHighestSalary {
                 .forEach(e -> System.out.println(e.name() + ":" + e.salary()));
 
     }
-}
-
-record Employee(String name, double salary) {
 }
