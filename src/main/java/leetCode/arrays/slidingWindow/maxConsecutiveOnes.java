@@ -10,7 +10,7 @@ package leetCode.arrays.slidingWindow;
     Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
  */
 
-public class maxConsecutiveOnce {
+public class maxConsecutiveOnes {
     static int findMaxConsecutiveOnce(int[] nums) {
         int n = nums.length;
         int maxCount = 0, currentCount = 0;
