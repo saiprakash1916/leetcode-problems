@@ -1,4 +1,4 @@
-package commonQuestions;
+package singletonExample;
 
 public class singleton {
     private static singleton instance;
@@ -6,7 +6,7 @@ public class singleton {
         System.out.println("Singleton Object created");
     }
     public static singleton getInstance(){
-        // Single check
+        // First check
         if(instance == null){
             synchronized (singleton.class){
                 // Second check
