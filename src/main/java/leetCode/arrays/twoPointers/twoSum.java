@@ -9,7 +9,8 @@ import java.util.Arrays;
     they add up to a specific target number. Let these two numbers be numbers[index1] and
     numbers[index2] where 1 <= index1 < index2 <= numbers.length.
 
-    Return the indices of the two numbers index1 and index2, each incremented by one, as an integer array [index1, index2] of length 2.
+    Return the indices of the two numbers index1 and index2, each incremented by one,
+    as an integer array [index1, index2] of length 2.
 
     The tests are generated such that there is exactly one solution. You may not use the same element twice.
 

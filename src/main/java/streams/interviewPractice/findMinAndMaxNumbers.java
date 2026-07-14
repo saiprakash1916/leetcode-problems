@@ -12,12 +12,12 @@ public class findMinAndMaxNumbers {
 
     static void findMaxNumberByUsingOptionalClass(List<Integer> numbers){
         Optional<Integer> result = numbers.stream().max(Integer::compare);
-        result.ifPresent(System.out::println);
+        System.out.println("The Largest number is: " + result.orElse(0));
     }
 
     static void fidMinNumber(List<Integer> numbers){
         int result = numbers.stream().min(Integer::compare).orElse(0);
-        System.out.println("The highest number is: " + result);
+        System.out.println("The Smallest number is: " + result);
     }
 
     public static void main(String[] args) {
