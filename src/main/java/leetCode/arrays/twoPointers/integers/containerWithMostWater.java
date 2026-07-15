@@ -1,4 +1,4 @@
-package leetCode.arrays.twoPointers;
+package leetCode.arrays.twoPointers.integers;
 
 /*
     Leet Code Problem No: 11. Container With Most Water
