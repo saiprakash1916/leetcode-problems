@@ -1,8 +1,7 @@
-package streams.interviewPractice;
+package streams;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 public class countElementsInList {
     static void countNumbers(List<Integer> numbers){

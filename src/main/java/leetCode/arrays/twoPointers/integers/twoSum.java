@@ -1,6 +1,7 @@
 package leetCode.arrays.twoPointers.integers;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 /*
     Leet Code Problem No: 167. Two Sum II - Input Array Is Sorted
@@ -23,7 +24,7 @@ import java.util.Arrays;
     Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].
 */
 public class twoSum {
-    static int[] twoSumSolution(int[] num, int target) {
+    static int[] twoSumSortedArray(int[] num, int target) {
         int left = 0;
         int right = num.length - 1;
         while (left < right) {
@@ -39,9 +40,24 @@ public class twoSum {
         return new int[]{-1, -1};
     }
 
+    static int[] twoSumUnSortedArray(int[] num, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i < num.length; i++){
+            int complement = target - num[i];
+
+            if(map.containsKey(complement)){
+                return new int[]{map.get(complement) + 1, i + 1};
+            }
+            map.put(num[i], i);
+        }
+        return new int[]{-1, -1};
+    }
+
     public static void main(String[] args) {
-        int[] num = {2, 7, 11, 15};
+        int[] sortedNum = {2, 7, 11, 15};
+        int[] unSortedNum = {7, 2, 15, 11};
         int target = 9;
-        System.out.println((Arrays.toString(twoSumSolution(num, target))));
+        System.out.println((Arrays.toString(twoSumSortedArray(sortedNum, target))));
+        System.out.println(Arrays.toString(twoSumUnSortedArray(unSortedNum, target)));
     }
 }

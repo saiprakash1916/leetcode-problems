@@ -1,4 +1,4 @@
-package streams.interviewPractice;
+package streams;
 
 import java.util.*;
 
