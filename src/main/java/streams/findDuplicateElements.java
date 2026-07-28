@@ -2,6 +2,7 @@ package streams;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -11,10 +12,10 @@ import java.util.Set;
  */
 public class findDuplicateElements {
     public static void main(String[] args) {
-        int[] num = {1, 2, 3, 4, 2, 5, 1};
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 2, 5, 1);
         Set<Integer> set = new HashSet<>();
 
-        int[] result = Arrays.stream(num)
+        Object[] result = list.stream()
                 .filter(n -> !set.add(n))
                 .toArray();
         System.out.println(Arrays.toString(result));       // [2, 1]
