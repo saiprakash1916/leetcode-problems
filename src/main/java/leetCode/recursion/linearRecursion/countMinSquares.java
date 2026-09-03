@@ -19,7 +19,6 @@ public class countMinSquares {
         return min;
     }
     public static void main(String[] args) {
-        int num = 12;
-        System.out.println(countSquares(num));
+        System.out.println("Minimum Count squares for 12 is : " + countSquares(12));
     }
 }
