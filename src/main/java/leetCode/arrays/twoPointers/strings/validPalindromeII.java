@@ -19,12 +19,13 @@ package leetCode.arrays.twoPointers.strings;
     Input: s = "abc"
     Output: false
  */
-public class validPalindrome_II {
-    static boolean isValid(String s) {
+public class validPalindromeII {
+
+    static boolean isValidPalindrome(String s) {
         int left = 0, right = s.length() - 1;
         while (left < right) {
             if (s.charAt(left) != s.charAt(right)) {
-                return isPalindrome(s, left + 1, right) || isPalindrome(s, left, right - 1);
+                return isValid(s, left + 1, right) || isValid(s, left, right - 1);
             }
             left++;
             right--;
@@ -32,7 +33,7 @@ public class validPalindrome_II {
         return true;
     }
 
-    static boolean isPalindrome(String s, int left, int right) {
+    static boolean isValid(String s, int left, int right) {
         while (left < right) {
             if (s.charAt(left) != s.charAt(right)) {
                 return false;
@@ -44,7 +45,9 @@ public class validPalindrome_II {
     }
 
     public static void main(String[] args) {
-        String s = "aba";
-        System.out.println(isValid(s));
+        System.out.println("abca : " + isValidPalindrome("abca"));
+        System.out.println("racecar : " + isValidPalindrome("racecar"));
+        System.out.println("abc : " + isValidPalindrome("abc"));
+        System.out.println("ab : " + isValidPalindrome("ab"));
     }
 }
