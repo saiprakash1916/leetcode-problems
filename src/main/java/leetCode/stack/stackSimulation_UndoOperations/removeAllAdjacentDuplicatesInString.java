@@ -23,16 +23,16 @@ package leetCode.stack.stackSimulation_UndoOperations;
  */
 public class removeAllAdjacentDuplicatesInString {
     static String removeAllAdjacentDuplicates(String str) {
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder builder = new StringBuilder();
         for (char ch : str.toCharArray()) {
-            int len = stringBuilder.length();
-            if (len > 0 && stringBuilder.charAt(len - 1) == ch) {
-                stringBuilder.deleteCharAt(len - 1);
+            int len = builder.length();
+            if (len > 0 && builder.charAt(len - 1) == ch) {
+                builder.deleteCharAt(len - 1);
             } else {
-                stringBuilder.append(ch);
+                builder.append(ch);
             }
         }
-        return stringBuilder.toString();
+        return builder.toString();
     }
 
     public static void main(String[] args) {

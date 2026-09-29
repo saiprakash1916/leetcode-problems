@@ -34,17 +34,17 @@ package leetCode.stack.stackSimulation_UndoOperations;
  */
 public class makeTheStringGreat {
     static String stringGreat(String str) {
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder builder = new StringBuilder();
         for (char ch : str.toCharArray()) {
-            int len = stringBuilder.length();
+            int len = builder.length();
 
-            if (len > 0 && Character.toLowerCase(stringBuilder.charAt(len - 1)) == Character.toLowerCase(ch) && stringBuilder.charAt(len - 1) != ch) {
-                stringBuilder.deleteCharAt(len - 1);
+            if (len > 0 && Character.toLowerCase(builder.charAt(len - 1)) == Character.toLowerCase(ch) && builder.charAt(len - 1) != ch) {
+                builder.deleteCharAt(len - 1);
             } else {
-                stringBuilder.append(ch);
+                builder.append(ch);
             }
         }
-        return stringBuilder.toString();
+        return builder.toString();
     }
 
     public static void main(String[] args) {
